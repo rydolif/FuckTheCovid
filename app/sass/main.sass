@@ -445,6 +445,109 @@
 		@extend .hero__btn
 
 
+.awards
+	background-color: #131317
+	padding: 100px 0
+
+	+r(1300)
+		padding: 80px 0
+
+	+r(992)
+		padding: 50px 0
+
+	+r(576)
+		padding: 30px 0
+
+	&__wrap
+		position: relative
+
+	&__title
+		text-align: center
+		margin-bottom: 1em
+
+		+r(992)
+			margin-bottom: 0.4em
+
+	&__item
+		img
+			max-width: 100%
+
+	&__button
+		position: absolute
+		top: 50%
+		left: 0
+		right: 0
+		transform: translate(0, -50%)
+		display: flex
+		justify-content: space-between
+		align-items: center
+		z-index: 100
+
+		&_prev,
+		&_next
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 80px
+			height: 80px
+			border-radius: 50%
+			background-color: $accent
+			border: 2px solid $accent
+			+transition
+
+			+r(992)
+				height: 50px
+				width: 50px
+
+			+r(480)
+				height: 35px
+				width: 35px
+
+			+r(400)
+				height: 45px
+				width: 45px
+
+			&:focus
+				outline: none
+
+			&:hover
+				border: 2px solid #fff
+
+			&:active
+				border: 2px solid transparent
+
+			&::before
+				content: ''
+				display: block
+				width: 23px
+				height: 23px
+				border-top: 4px solid #fff
+				border-left: 4px solid #fff
+				max-width: 30%
+				max-height: 30%
+
+		&_prev
+			transform: translate(-50%, 0)
+
+			+r(992)
+				transform: translate(-10px, 0)
+
+			&::before
+				transform: translate(16%, 0) rotate(-45deg)
+
+		&_next
+			transform: translate(50%, 0)
+
+			+r(992)
+				transform: translate(10px, 0)
+
+			&::before
+				transform: translate(-16%, 0) rotate(135deg)
+
+
+.part
+
+
 .footer
 	height: 500px
 
